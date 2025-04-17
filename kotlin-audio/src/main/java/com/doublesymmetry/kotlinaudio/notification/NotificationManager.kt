@@ -754,6 +754,7 @@ class NotificationManager internal constructor(
         notification: Notification,
         ongoing: Boolean
     ) {
+        notification.`when` = 0L
         scope.launch {
             event.updateNotificationState(
                 NotificationState.POSTED(
